@@ -14,6 +14,8 @@
 		378C7DEF2104DBC900FED5C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378C7DED2104DBC900FED5C6 /* LaunchScreen.storyboard */; };
 		378C7DFA2104DBC900FED5C6 /* Password_GeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C7DF92104DBC900FED5C6 /* Password_GeneratorUITests.swift */; };
 		37B82E3221060D72005C9E77 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B82E3121060D72005C9E77 /* Generator.swift */; };
+		666AD1504DAF48513B6A9EE7 /* Pods_Password_Generator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1A71551591E623C5552054 /* Pods_Password_Generator.framework */; };
+		F08B78CBCA3B119FDEB32794 /* Pods_Password_GeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C54783D1E9C0EB1169E1215 /* Pods_Password_GeneratorUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C54783D1E9C0EB1169E1215 /* Pods_Password_GeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Password_GeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1A71551591E623C5552054 /* Pods_Password_Generator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Password_Generator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		378C7DE12104DBC800FED5C6 /* Password-Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password-Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		378C7DE42104DBC800FED5C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		378C7DE62104DBC800FED5C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +42,10 @@
 		378C7DF92104DBC900FED5C6 /* Password_GeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_GeneratorUITests.swift; sourceTree = "<group>"; };
 		378C7DFB2104DBC900FED5C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37B82E3121060D72005C9E77 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		6B5E9AE410DDF41FC87AD088 /* Pods-Password-Generator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password-Generator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Password-Generator/Pods-Password-Generator.release.xcconfig"; sourceTree = "<group>"; };
+		6F76B3288EDB1C873475C68A /* Pods-Password-Generator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password-Generator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Password-Generator/Pods-Password-Generator.debug.xcconfig"; sourceTree = "<group>"; };
+		9B432E610B32F30DA3AE4433 /* Pods-Password-GeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password-GeneratorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Password-GeneratorUITests/Pods-Password-GeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A60D9492DAF7703308A1BEA2 /* Pods-Password-GeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password-GeneratorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Password-GeneratorUITests/Pods-Password-GeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666AD1504DAF48513B6A9EE7 /* Pods_Password_Generator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F08B78CBCA3B119FDEB32794 /* Pods_Password_GeneratorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +74,8 @@
 				378C7DE32104DBC800FED5C6 /* Password-Generator */,
 				378C7DF82104DBC900FED5C6 /* Password-GeneratorUITests */,
 				378C7DE22104DBC800FED5C6 /* Products */,
+				6AB64CBE7737506557403243 /* Pods */,
+				3CDE4B57C1681F715F3530D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +111,26 @@
 			path = "Password-GeneratorUITests";
 			sourceTree = "<group>";
 		};
+		3CDE4B57C1681F715F3530D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A1A71551591E623C5552054 /* Pods_Password_Generator.framework */,
+				1C54783D1E9C0EB1169E1215 /* Pods_Password_GeneratorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AB64CBE7737506557403243 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F76B3288EDB1C873475C68A /* Pods-Password-Generator.debug.xcconfig */,
+				6B5E9AE410DDF41FC87AD088 /* Pods-Password-Generator.release.xcconfig */,
+				A60D9492DAF7703308A1BEA2 /* Pods-Password-GeneratorUITests.debug.xcconfig */,
+				9B432E610B32F30DA3AE4433 /* Pods-Password-GeneratorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 378C7DFE2104DBC900FED5C6 /* Build configuration list for PBXNativeTarget "Password-Generator" */;
 			buildPhases = (
+				56E01AEE341E1CCAD9ED411A /* [CP] Check Pods Manifest.lock */,
 				378C7DDD2104DBC800FED5C6 /* Sources */,
 				378C7DDE2104DBC800FED5C6 /* Frameworks */,
 				378C7DDF2104DBC800FED5C6 /* Resources */,
+				1D67F9C68E0AC230D1511712 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 378C7E012104DBC900FED5C6 /* Build configuration list for PBXNativeTarget "Password-GeneratorUITests" */;
 			buildPhases = (
+				19EAFB423FAABB2F26939E14 /* [CP] Check Pods Manifest.lock */,
 				378C7DF12104DBC900FED5C6 /* Sources */,
 				378C7DF22104DBC900FED5C6 /* Frameworks */,
 				378C7DF32104DBC900FED5C6 /* Resources */,
@@ -194,6 +229,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19EAFB423FAABB2F26939E14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Password-GeneratorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D67F9C68E0AC230D1511712 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Password-Generator/Pods-Password-Generator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Password-Generator/Pods-Password-Generator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56E01AEE341E1CCAD9ED411A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Password-Generator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		378C7DDD2104DBC800FED5C6 /* Sources */ = {
@@ -360,6 +454,7 @@
 		};
 		378C7DFF2104DBC900FED5C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F76B3288EDB1C873475C68A /* Pods-Password-Generator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +473,7 @@
 		};
 		378C7E002104DBC900FED5C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B5E9AE410DDF41FC87AD088 /* Pods-Password-Generator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +492,7 @@
 		};
 		378C7E022104DBC900FED5C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A60D9492DAF7703308A1BEA2 /* Pods-Password-GeneratorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,6 +513,7 @@
 		};
 		378C7E032104DBC900FED5C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B432E610B32F30DA3AE4433 /* Pods-Password-GeneratorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
