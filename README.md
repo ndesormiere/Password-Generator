@@ -1,2 +1,2 @@
 # Password-Generator
-A Password Generator in Swift
+A Password Generator built using RxSwift
