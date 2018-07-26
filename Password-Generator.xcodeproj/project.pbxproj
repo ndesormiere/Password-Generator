@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C5AA10124B0D85A1A85B0A1 /* Pods_Password_Generator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97AACA4B5C7A9B6EE7EC9D5 /* Pods_Password_Generator.framework */; };
+		378B57902109C84600A7A436 /* ViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B578F2109C84600A7A436 /* ViewController+Keyboard.swift */; };
+		378B57922109CBA600A7A436 /* AccessoryButtonKeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B57912109CBA600A7A436 /* AccessoryButtonKeyboardHelper.swift */; };
 		378C7DE52104DBC800FED5C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C7DE42104DBC800FED5C6 /* AppDelegate.swift */; };
 		378C7DE72104DBC800FED5C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C7DE62104DBC800FED5C6 /* ViewController.swift */; };
 		378C7DEA2104DBC800FED5C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378C7DE82104DBC800FED5C6 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 		0E2D10D806273C7F10476AAB /* Pods-Password-GeneratorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password-GeneratorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Password-GeneratorUITests/Pods-Password-GeneratorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		10800B4500804F1277E43D57 /* Pods_Password_GeneratorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Password_GeneratorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C3516E4BFF5A89FA0E42716 /* Pods-Password-Generator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password-Generator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Password-Generator/Pods-Password-Generator.debug.xcconfig"; sourceTree = "<group>"; };
+		378B578F2109C84600A7A436 /* ViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		378B57912109CBA600A7A436 /* AccessoryButtonKeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryButtonKeyboardHelper.swift; sourceTree = "<group>"; };
 		378C7DE12104DBC800FED5C6 /* Password-Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password-Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		378C7DE42104DBC800FED5C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		378C7DE62104DBC800FED5C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				378C7DE62104DBC800FED5C6 /* ViewController.swift */,
+				378B578F2109C84600A7A436 /* ViewController+Keyboard.swift */,
+				378B57912109CBA600A7A436 /* AccessoryButtonKeyboardHelper.swift */,
 				37AD61EA210887200046C1D5 /* ViewModel.swift */,
 				37AD61EC21088C0D0046C1D5 /* ViewModelType.swift */,
 				37B82E3121060D72005C9E77 /* Generator.swift */,
@@ -303,6 +309,8 @@
 				37B82E3221060D72005C9E77 /* Generator.swift in Sources */,
 				378C7DE72104DBC800FED5C6 /* ViewController.swift in Sources */,
 				37AD61EB210887200046C1D5 /* ViewModel.swift in Sources */,
+				378B57922109CBA600A7A436 /* AccessoryButtonKeyboardHelper.swift in Sources */,
+				378B57902109C84600A7A436 /* ViewController+Keyboard.swift in Sources */,
 				37AD61ED21088C0D0046C1D5 /* ViewModelType.swift in Sources */,
 				378C7DE52104DBC800FED5C6 /* AppDelegate.swift in Sources */,
 			);

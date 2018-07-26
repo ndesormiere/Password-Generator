@@ -13,7 +13,7 @@ import RxCocoa
 class ViewModel: ViewModelType {
   
   struct Input {
-    let length: AnyObserver<Int>
+    let length: AnyObserver<String>
     let wantSymbols: AnyObserver<Bool>
     let avoidProgChars: AnyObserver<Bool>
     let avoidSimilarChars: AnyObserver<Bool>
@@ -26,7 +26,7 @@ class ViewModel: ViewModelType {
   
   private struct Subject {
     let generatePasswordTapped = PublishSubject<Void>()
-    let length = BehaviorSubject<Int>(value: 15)
+    let length = BehaviorSubject<String>(value: "15")
     let wantSymbols = BehaviorSubject<Bool>(value: true)
     let avoidProgChars = BehaviorSubject<Bool>(value: false)
     let avoidSimilarChars = BehaviorSubject<Bool>(value: false)
@@ -64,9 +64,10 @@ class ViewModel: ViewModelType {
   private func setup() {
 
     Observable
-      .combineLatest(subject.length.asObservable(), subject.wantSymbols.asObservable(), subject.avoidProgChars.asObservable(), subject.avoidSimilarChars.asObservable())
-      .subscribe(onNext: { [weak self] (length, wantSymbols, avoidProgChars, avoidSimilarChars) in
-        let generatorSettings = GeneratorSettings(length: length, wantSymbols: wantSymbols, avoidProgChars: avoidProgChars, avoidSimilarChars: avoidSimilarChars)
+      .combineLatest(subject.wantSymbols.asObservable(), subject.avoidProgChars.asObservable(), subject.avoidSimilarChars.asObservable())
+      .subscribe(onNext: { [weak self] (wantSymbols, avoidProgChars, avoidSimilarChars) in
+        let intLength = self?.settings.length ?? 15 // default password size
+        let generatorSettings = GeneratorSettings(length: intLength, wantSymbols: wantSymbols, avoidProgChars: avoidProgChars, avoidSimilarChars: avoidSimilarChars)
         self?.settings = generatorSettings
         let password = Generator.shared.generatePassword(generatorSettings)
         self?.subject.password.onNext(password)
@@ -78,6 +79,13 @@ class ViewModel: ViewModelType {
         guard let generatorSettings = self?.settings else { return }
         let password = Generator.shared.generatePassword(generatorSettings)
         self?.subject.password.onNext(password)
+      })
+      .disposed(by: disposeBag)
+    
+    subject.length
+      .subscribe(onNext: { [weak self] (length) in
+        let intLength = Int(length) ?? 15 // default password size
+        self?.settings.length = intLength
       })
       .disposed(by: disposeBag)
     
