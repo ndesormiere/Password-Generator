@@ -14,7 +14,8 @@ extension ViewController {
     var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
     keyboardFrame = self.view.convert(keyboardFrame, from: nil)
     var contentInset:UIEdgeInsets = scrollview.contentInset
-    contentInset.bottom = keyboardFrame.size.height + 50 // +50 for the accessory toolbar
+    let extraInset: CGFloat = UIDevice.isIphoneX ? 75 : 0
+    contentInset.bottom = keyboardFrame.size.height + extraInset + 50 // +50 for the accessory toolbar
     scrollview.contentInset = contentInset
   }
   

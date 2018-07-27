@@ -19,6 +19,7 @@
 		37AD61EB210887200046C1D5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD61EA210887200046C1D5 /* ViewModel.swift */; };
 		37AD61ED21088C0D0046C1D5 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AD61EC21088C0D0046C1D5 /* ViewModelType.swift */; };
 		37B82E3221060D72005C9E77 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B82E3121060D72005C9E77 /* Generator.swift */; };
+		37D09730210AB46D00373572 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D0972F210AB46D00373572 /* UIDevice+Extension.swift */; };
 		9ACA339DC137D00855C8EC51 /* Pods_Password_GeneratorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10800B4500804F1277E43D57 /* Pods_Password_GeneratorUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		37AD61EA210887200046C1D5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		37AD61EC21088C0D0046C1D5 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		37B82E3121060D72005C9E77 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		37D0972F210AB46D00373572 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		586B00CE8CBE8911B16D527B /* Pods-Password-Generator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password-Generator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Password-Generator/Pods-Password-Generator.release.xcconfig"; sourceTree = "<group>"; };
 		C3C95E8F07EAF6E81396423D /* Pods-Password-GeneratorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Password-GeneratorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Password-GeneratorUITests/Pods-Password-GeneratorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C97AACA4B5C7A9B6EE7EC9D5 /* Pods_Password_Generator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Password_Generator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 				37AD61EA210887200046C1D5 /* ViewModel.swift */,
 				37AD61EC21088C0D0046C1D5 /* ViewModelType.swift */,
 				37B82E3121060D72005C9E77 /* Generator.swift */,
+				37D0972F210AB46D00373572 /* UIDevice+Extension.swift */,
 				378C7DE82104DBC800FED5C6 /* Main.storyboard */,
 				378C7DEB2104DBC900FED5C6 /* Assets.xcassets */,
 				378C7DED2104DBC900FED5C6 /* LaunchScreen.storyboard */,
@@ -251,11 +254,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Password-Generator/Pods-Password-Generator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B82E3221060D72005C9E77 /* Generator.swift in Sources */,
+				37D09730210AB46D00373572 /* UIDevice+Extension.swift in Sources */,
 				378C7DE72104DBC800FED5C6 /* ViewController.swift in Sources */,
 				37AD61EB210887200046C1D5 /* ViewModel.swift in Sources */,
 				378B57922109CBA600A7A436 /* AccessoryButtonKeyboardHelper.swift in Sources */,

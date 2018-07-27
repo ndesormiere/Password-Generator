@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxGesture
 
 class ViewController: UIViewController, UITextFieldDelegate {
   
@@ -16,6 +17,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var generatePasswordButton: UIButton!
   @IBOutlet weak var passwordLabel: UILabel!
   @IBOutlet weak var passwordLabelView: UIView!
+  @IBOutlet weak var copyButton: UIButton!
+  @IBOutlet weak var copyLabelView: UIView!
   @IBOutlet weak var lenghtStackView: UIStackView!
   @IBOutlet weak var lenghtTextField: UITextField!
   @IBOutlet weak var wantSymbolsStackView: UIStackView!
@@ -27,6 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   let viewModel = ViewModel()
   let disposeBag = DisposeBag()
+  let pasteboard = UIPasteboard.general
   fileprivate lazy var accessoryButtonKeyboard = AccessoryButtonKeyboardHelper(buttonTitle: "Done")
 
   override func viewDidLoad() {
@@ -77,6 +81,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
       .bind(to: viewModel.input.avoidSimilarChars)
       .disposed(by: disposeBag)
     
+    passwordLabelView.rx.tapGesture()
+      .when(.recognized)
+      .subscribe(onNext: { [weak self] (_) in
+        self?.copyToPasteboard()
+      })
+      .disposed(by: disposeBag)
+    
+    copyButton.rx.tap
+      .subscribe(onNext: { [weak self] (_) in
+        self?.copyToPasteboard()
+      })
+      .disposed(by: disposeBag)
+    
     // Output
     
     viewModel.output.password
@@ -85,6 +102,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
       .bind(to: passwordLabel.rx.text)
       .disposed(by: disposeBag)
     
+  }
+  
+  private func copyToPasteboard() {
+    pasteboard.string = passwordLabel.text
+    if let string = pasteboard.string {
+      print(string)
+    }
   }
   
   // MARK: - UITextFieldDelegate
