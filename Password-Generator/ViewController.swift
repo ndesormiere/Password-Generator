@@ -16,7 +16,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var generatePasswordButton: UIButton!
   @IBOutlet weak var passwordLabel: UILabel!
   @IBOutlet weak var passwordLabelView: UIView!
-  @IBOutlet weak var showOptionButton: UIButton!
   @IBOutlet weak var lenghtStackView: UIStackView!
   @IBOutlet weak var lenghtTextField: UITextField!
   @IBOutlet weak var wantSymbolsStackView: UIStackView!
@@ -44,8 +43,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   private func setupUI() {
     
-    hideStackViews(true)
-
     generatePasswordButton.layer.cornerRadius = 5
     generatePasswordButton.layer.masksToBounds = true
     
@@ -88,18 +85,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
       .bind(to: passwordLabel.rx.text)
       .disposed(by: disposeBag)
     
-  }
-  
-  @IBAction func showOptionsTapped(_ sender: Any) {
-    hideStackViews(false)
-  }
-  
-  private func hideStackViews(_ value: Bool) {
-    showOptionButton.isHidden = !value
-    lenghtStackView.isHidden = value
-    wantSymbolsStackView.isHidden = value
-    avoidProgCharsStackView.isHidden = value
-    avoidSimilarCharsStackView.isHidden = value
   }
   
   // MARK: - UITextFieldDelegate
