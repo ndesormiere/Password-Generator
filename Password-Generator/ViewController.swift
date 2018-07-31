@@ -102,6 +102,42 @@ class ViewController: UIViewController, UITextFieldDelegate {
       .bind(to: passwordLabel.rx.text)
       .disposed(by: disposeBag)
     
+    viewModel.output.length
+      .asObservable()
+      .map { $0 }
+      .bind(to: lenghtTextField.rx.text)
+      .disposed(by: disposeBag)
+    
+    viewModel.output.wantSymbols
+      .asObservable()
+      .bind(to: wantSymbolsSwitch.rx.isOn)
+      .disposed(by: disposeBag)
+    
+    viewModel.output.avoidProgChars
+      .asObservable()
+      .bind(to: avoidProgCharsSwitch.rx.isOn)
+      .disposed(by: disposeBag)
+    
+    viewModel.output.avoidSimilarChars
+      .asObservable()
+      .bind(to: avoidSimilarCharsSwitch.rx.isOn)
+      .disposed(by: disposeBag)
+    
+    viewModel.output.isLengthValid
+      .asObservable()
+      .subscribe(onNext: { [weak self] (isLengthValid) in
+        self?.changeTextFieldBackground(isLengthValid)
+      })
+      .disposed(by: disposeBag)
+    
+    viewModel.output.shouldDisplayError
+      .asObservable()
+      .subscribe(onNext: { [weak self] (isLengthValid) in
+        self?.displayAlertIfNeeded(isLengthValid)
+      })
+      .disposed(by: disposeBag)
+    
+
   }
   
   private func copyToPasteboard() {
@@ -111,11 +147,37 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
   }
   
-  // MARK: - UITextFieldDelegate
-  
-  func textFieldDidBeginEditing(_ textField: UITextField) {
-    lenghtTextField.text = ""
+  private func changeTextFieldBackground(_ isLengthValid: PasswordError) {
+    switch isLengthValid {
+    case .tooLong, .tooShort:
+      lenghtTextField.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3)
+    case .ok:
+      lenghtTextField.backgroundColor = .none
+    }
   }
+  
+  private func displayAlertIfNeeded(_ isLengthValid: PasswordError) {
+    var title = ""
+    let message = "Please type a number between 8 and 99 for the length"
+    switch isLengthValid {
+    case .tooLong:
+      title = "Password is too Long"
+    case .tooShort:
+      title = "Password is too short"
+    case .ok:
+      return
+    }
+    presentAlert(title, message)
+  }
+  
+  private func presentAlert(_ title: String, _ message: String) {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default)
+    alertController.addAction(okAction)
+    self.present(alertController, animated: true, completion: nil)
+  }
+  
+  // MARK: - UITextFieldDelegate
   
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     guard let text = textField.text else { return true }
