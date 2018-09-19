@@ -41,7 +41,7 @@ public struct SwipeGestureRecognizerFactory: GestureRecognizerFactory {
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
     public init(
-        _ direction: UISwipeGestureRecognizerDirection,
+        _ direction: UISwipeGestureRecognizer.Direction,
         numberOfTouchesRequired: Int = Defaults.numberOfTouchesRequired,
         configuration: ((UISwipeGestureRecognizer, RxGestureRecognizerDelegate) -> Void)? = Defaults.configuration
         ) {
@@ -61,7 +61,7 @@ extension AnyGestureRecognizerFactory {
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
     public static func swipe(
-        _ direction: UISwipeGestureRecognizerDirection,
+        _ direction: UISwipeGestureRecognizer.Direction,
         numberOfTouchesRequired: Int = Defaults.numberOfTouchesRequired,
         configuration: ((UISwipeGestureRecognizer, RxGestureRecognizerDelegate) -> Void)? = Defaults.configuration
         ) -> AnyGestureRecognizerFactory {
@@ -82,7 +82,7 @@ public extension Reactive where Base: UIView {
      - parameter configuration: A closure that allows to fully configure the gesture recognizer
      */
     public func swipeGesture(
-        _ direction: UISwipeGestureRecognizerDirection,
+        _ direction: UISwipeGestureRecognizer.Direction,
         numberOfTouchesRequired: Int = Defaults.numberOfTouchesRequired,
         configuration: ((UISwipeGestureRecognizer, RxGestureRecognizerDelegate) -> Void)? = Defaults.configuration
         ) -> ControlEvent<UISwipeGestureRecognizer> {

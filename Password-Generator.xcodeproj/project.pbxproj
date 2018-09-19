@@ -199,9 +199,11 @@
 				TargetAttributes = {
 					378C7DE02104DBC800FED5C6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					378C7DF42104DBC900FED5C6 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 378C7DE02104DBC800FED5C6;
 					};
 				};
@@ -488,7 +490,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.desormiere.nicolas.Password-Generator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -507,7 +509,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.desormiere.nicolas.Password-Generator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -527,7 +529,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.desormiere.nicolas.Password-GeneratorUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Password-Generator";
 			};
@@ -548,7 +550,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.desormiere.nicolas.Password-GeneratorUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Password-Generator";
 			};

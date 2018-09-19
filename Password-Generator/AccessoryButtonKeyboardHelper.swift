@@ -27,13 +27,13 @@ class AccessoryButtonKeyboardHelper {
   
   init(buttonTitle: String){
     //Creation of a spacer for the toolbar
-    let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+    let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
     
     //Creation of an Array of UIBarButtonItem to populate the toolbar
     var items = [UIBarButtonItem]()
     
     //Creation of the toolbar Done button
-    let doneBarButtonItem: UIBarButtonItem = UIBarButtonItem(title: buttonTitle, style: UIBarButtonItemStyle.done, target: self, action: #selector(AccessoryButtonKeyboardHelper.doneButtonAction))
+    let doneBarButtonItem: UIBarButtonItem = UIBarButtonItem(title: buttonTitle, style: UIBarButtonItem.Style.done, target: self, action: #selector(AccessoryButtonKeyboardHelper.doneButtonAction))
     
     //Addition of the buttons in the items array
     items.append(flexSpace)

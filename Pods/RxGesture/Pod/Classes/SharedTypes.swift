@@ -24,7 +24,7 @@ import Foundation
     import UIKit
     public typealias Touch = UITouch
     public typealias GestureRecognizer = UIGestureRecognizer
-    public typealias GestureRecognizerState = UIGestureRecognizerState
+    public typealias GestureRecognizerState = UIGestureRecognizer.State
     public typealias GestureRecognizerDelegate = UIGestureRecognizerDelegate
     public typealias View = UIView
 #elseif os(OSX)

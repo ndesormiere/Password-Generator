@@ -11,7 +11,7 @@ import UIKit
 extension ViewController {
   @objc func keyboardWillShow(notification:NSNotification){
     var userInfo = notification.userInfo!
-    var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+    var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
     keyboardFrame = self.view.convert(keyboardFrame, from: nil)
     var contentInset:UIEdgeInsets = scrollview.contentInset
     let extraInset: CGFloat = UIDevice.isIphoneX ? 75 : 0
