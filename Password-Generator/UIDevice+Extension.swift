@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIDevice {
   
-  public static var isIphoneX: Bool {
+    static var isIphoneX: Bool {
     let size = UIScreen.main.bounds.size
     return size.width == 375 && size.height > 800
   }
